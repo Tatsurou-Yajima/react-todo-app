@@ -38,6 +38,11 @@ body {
     padding: 0.5rem;
     border: none;
 }
+.addTodoCheckBox {
+    margin-right: 5px;
+    height: 10px;
+    line-height: 10px;
+}
 button {
     border: none;
 }
