@@ -6,8 +6,7 @@ const Todo = ({ todo, handleTodoClick }) => {
     return (
         <div className="todo">
             <label>
-                <input type="checkbox" onChange={todoClick} />
-                {todo.name}
+                <input className="addTodoCheckBox" type="checkbox" onChange={todoClick} />
                 <span>{todo.name}</span>
             </label>
         </div>

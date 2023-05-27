@@ -8,11 +8,10 @@ function App() {
 
     const todoNameRef = useRef();
     const handleAddTodo = () => {
-        let name = todoNameRef.current.value;
+        const name = todoNameRef.current.value;
         if (name === "") { return }
 
         setTodos([...todos, { id: uuidv4(), name: name, completed: false }])
-
         todoNameRef.current.value = null;
     }
 
