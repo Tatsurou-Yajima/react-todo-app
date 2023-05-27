@@ -4,10 +4,11 @@ const Todo = ({ todo, handleTodoClick }) => {
     }
 
     return (
-        <div>
+        <div className="todo">
             <label>
                 <input type="checkbox" onChange={todoClick} />
                 {todo.name}
+                <span>{todo.name}</span>
             </label>
         </div>
     )

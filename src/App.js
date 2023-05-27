@@ -1,3 +1,4 @@
+import "./App.css"
 import { useState, useRef } from "react";
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from 'uuid';
@@ -28,12 +29,15 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="container">
+            <div className="taskTitle">ToDo アプリ</div>
+            <div className="inputForm">
+                <input type="text" ref={todoNameRef} />
+                <button onClick={handleAddTodo}><i className="fa-solid fa-plus"></i></button>
+                <button onClick={handleDelTodos}><i className="fa-solid fa-trash"></i></button>
+            </div>
+            <div className="taskCount">残りのタスク:{todos.filter(todo => todo.completed === false).length}</div>
             <TodoList todos={todos} handleTodoClick={handleTodoClick} />
-            <input type="text" ref={todoNameRef} />
-            <button onClick={handleAddTodo}>タスクを追加</button>
-            <button onClick={handleDelTodos}>完了したタスクの削除</button>
-            <div>残りのタスク: {todos.filter(todo => todo.completed === false).length}</div>
         </div>
     );
 }
